@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light Mode - Clean & Professional */
+.gradient-bg {
+  background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+}
+
+/* Enhanced card design */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+/* Clean text styling */
+.gradient-text {
+  color: #1e293b;
+}
+
+/* Enhanced hover effect for cards */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: #3b82f6;
+}
+
+/* Accent decorations */
+.accent-line {
+  position: relative;
+  padding-bottom: 16px;
+  border-bottom: 3px solid #3b82f6;
+  margin-bottom: 8px;
+}
+
+.accent-line::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+/* Centered accent line */
+.accent-line.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
