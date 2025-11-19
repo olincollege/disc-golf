@@ -11,93 +11,117 @@ function Process() {
         Click on any sprint to explore the details.
       </p>
 
-      {/* Interactive Timeline */}
-      <div className="relative mb-16">
-        {/* Timeline Line */}
-        <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-300 transform -translate-y-1/2 hidden md:block"></div>
+      {/* GitHub-Style Tree Timeline - Centered */}
+      <div className="relative max-w-6xl mx-auto mb-16">
+        {/* Main Vertical Line with gradient - CENTERED */}
+        <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-blue-600 to-green-500 transform -translate-x-1/2"></div>
         
-        {/* Timeline Nodes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative">
-          {/* Sprint 1 */}
-          <Link 
-            to="/process/sprint1"
-            className="group relative"
-          >
-            <div className="flex flex-col items-center">
-              {/* Node Circle */}
-              <div className="relative z-10 w-32 h-32 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:scale-110 transition-all duration-300 shadow-lg">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 group-hover:text-white transition-colors">01</div>
-                  <div className="text-xs font-semibold text-gray-600 group-hover:text-white transition-colors">Sprint</div>
+        {/* Timeline Items */}
+        <div className="space-y-32">
+          {/* Sprint 1 - LEFT BRANCH */}
+          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            {/* Dot on CENTER LINE - at midpoint */}
+            <div className="absolute left-1/2 top-1/2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-lg z-20 transform -translate-x-1/2 -translate-y-1/2"></div>
+            
+            {/* Short line ONLY in the gap - from center to left */}
+            <div className="hidden md:block absolute left-1/2 top-1/2 w-8 h-0.5 bg-blue-500 z-10 transform -translate-x-full -translate-y-1/2"></div>
+            
+            {/* Content on LEFT */}
+            <div className="md:order-1 order-2 flex justify-end">
+              <Link to="/process/sprint1" className="group block w-full">
+                <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg border-2 border-blue-200 group-hover:shadow-2xl group-hover:border-blue-500 group-hover:-translate-y-1 transition-all duration-300">
+                  <div className="flex items-center mb-3">
+                    <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl mr-4 shadow-md">
+                      01
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">Sprint 1: Ideation</h3>
+                  </div>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    Concept development, initial prototyping, and feasibility analysis
+                  </p>
+                  <div className="flex items-center text-blue-600 font-semibold">
+                    <span>Explore Sprint Details</span>
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              
-              {/* Content Card */}
-              <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200 group-hover:shadow-xl group-hover:border-blue-600 transition-all duration-300 w-full">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Ideation</h3>
-                <p className="text-gray-600 text-sm text-center mb-3">
-                  Concept development and initial prototyping
-                </p>
-                <div className="flex items-center justify-center text-blue-600 font-semibold text-sm group-hover:underline">
-                  Explore Sprint 1 →
-                </div>
-              </div>
+              </Link>
             </div>
-          </Link>
+            
+            {/* Empty space on RIGHT */}
+            <div className="hidden md:block md:order-2"></div>
+          </div>
 
-          {/* Sprint 2 */}
-          <Link 
-            to="/process/sprint2"
-            className="group relative"
-          >
-            <div className="flex flex-col items-center">
-              {/* Node Circle */}
-              <div className="relative z-10 w-32 h-32 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:scale-110 transition-all duration-300 shadow-lg">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 group-hover:text-white transition-colors">02</div>
-                  <div className="text-xs font-semibold text-gray-600 group-hover:text-white transition-colors">Sprint</div>
+          {/* Sprint 2 - RIGHT BRANCH */}
+          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            {/* Dot on CENTER LINE - at midpoint */}
+            <div className="absolute left-1/2 top-1/2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-lg z-20 transform -translate-x-1/2 -translate-y-1/2"></div>
+            
+            {/* Short line ONLY in the gap - from center to right */}
+            <div className="hidden md:block absolute left-1/2 top-1/2 w-8 h-0.5 bg-blue-500 z-10 transform -translate-y-1/2"></div>
+            
+            {/* Empty space on LEFT */}
+            <div className="hidden md:block md:order-1"></div>
+            
+            {/* Content on RIGHT */}
+            <div className="md:order-2 order-2 flex justify-start">
+              <Link to="/process/sprint2" className="group block w-full">
+                <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg border-2 border-blue-200 group-hover:shadow-2xl group-hover:border-blue-500 group-hover:-translate-y-1 transition-all duration-300">
+                  <div className="flex items-center mb-3">
+                    <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl mr-4 shadow-md">
+                      02
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">Sprint 2: Prototyping</h3>
+                  </div>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    Subsystem development, testing, and component integration
+                  </p>
+                  <div className="flex items-center text-blue-600 font-semibold">
+                    <span>Explore Sprint Details</span>
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              
-              {/* Content Card */}
-              <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200 group-hover:shadow-xl group-hover:border-blue-600 transition-all duration-300 w-full">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Prototyping</h3>
-                <p className="text-gray-600 text-sm text-center mb-3">
-                  Subsystem development and testing
-                </p>
-                <div className="flex items-center justify-center text-blue-600 font-semibold text-sm group-hover:underline">
-                  Explore Sprint 2 →
-                </div>
-              </div>
+              </Link>
             </div>
-          </Link>
+          </div>
 
-          {/* Sprint 3 */}
-          <Link 
-            to="/process/sprint3"
-            className="group relative"
-          >
-            <div className="flex flex-col items-center">
-              {/* Node Circle */}
-              <div className="relative z-10 w-32 h-32 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:scale-110 transition-all duration-300 shadow-lg">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 group-hover:text-white transition-colors">03</div>
-                  <div className="text-xs font-semibold text-gray-600 group-hover:text-white transition-colors">Sprint</div>
+          {/* Sprint 3 - LEFT BRANCH */}
+          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            {/* Dot on CENTER LINE - at midpoint */}
+            <div className="absolute left-1/2 top-1/2 w-3 h-3 bg-green-500 rounded-full border-2 border-white shadow-lg z-20 transform -translate-x-1/2 -translate-y-1/2"></div>
+            
+            {/* Short line ONLY in the gap - from center to left */}
+            <div className="hidden md:block absolute left-1/2 top-1/2 w-8 h-0.5 bg-green-500 z-10 transform -translate-x-full -translate-y-1/2"></div>
+            
+            {/* Content on LEFT */}
+            <div className="md:order-1 order-2 flex justify-end">
+              <Link to="/process/sprint3" className="group block w-full">
+                <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg border-2 border-green-200 group-hover:shadow-2xl group-hover:border-green-500 group-hover:-translate-y-1 transition-all duration-300">
+                  <div className="flex items-center mb-3">
+                    <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center text-white font-bold text-xl mr-4 shadow-md">
+                      03
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">Sprint 3: Integration</h3>
+                  </div>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    System integration, comprehensive testing, and MVP delivery
+                  </p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <span>Explore Sprint Details</span>
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              
-              {/* Content Card */}
-              <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200 group-hover:shadow-xl group-hover:border-blue-600 transition-all duration-300 w-full">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Integration</h3>
-                <p className="text-gray-600 text-sm text-center mb-3">
-                  System integration and final testing
-                </p>
-                <div className="flex items-center justify-center text-blue-600 font-semibold text-sm group-hover:underline">
-                  Explore Sprint 3 →
-                </div>
-              </div>
+              </Link>
             </div>
-          </Link>
+            
+            {/* Empty space on RIGHT */}
+            <div className="hidden md:block md:order-2"></div>
+          </div>
         </div>
       </div>
 

@@ -1,95 +1,74 @@
 function Budget() {
   const bomItems = [
     {
-      component: "Arduino Mega 2560",
+      component: "Electronic Gas Valve",
       source: "Amazon",
       quantity: 1,
-      unitCost: 45.99,
-      totalCost: 45.99,
-      notes: "Microcontroller"
+      unitCost: 15.99,
+      totalCost: 15.99,
+      notes: "1/4\" NPT 12V/24V/110V/220V solenoid valve (Stretch Goal - Pneumatics)"
     },
     {
-      component: "DC Motor (12V, 100 RPM)",
-      source: "Pololu",
-      quantity: 2,
-      unitCost: 24.95,
-      totalCost: 49.90,
-      notes: "Drive motors"
-    },
-    {
-      component: "Motor Driver (L298N)",
-      source: "Adafruit",
+      component: "Pneumatic Tubing",
+      source: "Amazon",
       quantity: 1,
-      unitCost: 19.95,
-      totalCost: 19.95,
-      notes: "H-bridge motor controller"
+      unitCost: 15.99,
+      totalCost: 15.99,
+      notes: "1/4\" OD PU air hose, 32.8 ft kit (Stretch Goal - Pneumatics)"
     },
     {
-      component: "Ultrasonic Sensors (HC-SR04)",
-      source: "SparkFun",
-      quantity: 3,
-      unitCost: 3.95,
-      totalCost: 11.85,
-      notes: "Distance sensing"
-    },
-    {
-      component: "12V Power Supply (5A)",
-      source: "DigiKey",
+      component: "Pneumatic System Pressure Sensor",
+      source: "Amazon",
       quantity: 1,
-      unitCost: 18.50,
-      totalCost: 18.50,
-      notes: "Main power"
+      unitCost: 15.79,
+      totalCost: 15.79,
+      notes: "0-150 PSI sensor, 1/4\" NPT, 316 stainless steel (Stretch Goal - Pneumatics)"
     },
     {
-      component: "3D Printer Filament (PLA)",
-      source: "MatterHackers",
+      component: "Pressure Sensor Connector",
+      source: "McMaster Carr",
       quantity: 1,
-      unitCost: 21.99,
-      totalCost: 21.99,
-      notes: "Custom brackets and mounts"
+      unitCost: 3.96,
+      totalCost: 3.96,
+      notes: "Push-to-connect fitting, 1/4\" tube OD x 1/4\" NPT female (Stretch Goal - Pneumatics)"
     },
     {
-      component: "Acrylic Sheet (12\"×24\")",
-      source: "TAP Plastics",
-      quantity: 2,
-      unitCost: 15.00,
-      totalCost: 30.00,
-      notes: "Structural panels"
-    },
-    {
-      component: "Scrap Aluminum Stock",
-      source: "Machine Shop",
+      component: "Raspberry Pi Camera Module 3",
+      source: "Amazon",
       quantity: 1,
-      unitCost: 0.00,
-      totalCost: 0.00,
-      notes: "Estimated value: $15.00"
+      unitCost: 25.00,
+      totalCost: 25.00,
+      notes: "Autofocus camera module (Stretch Goal - AI Vision)"
     },
     {
-      component: "Assorted Hardware (screws, nuts, bolts)",
-      source: "Hardware Store",
+      component: "22-Pin to 22-Pin FPC Cable",
+      source: "Amazon",
       quantity: 1,
-      unitCost: 12.50,
-      totalCost: 12.50,
-      notes: "M3 and M5 fasteners"
+      unitCost: 6.69,
+      totalCost: 6.69,
+      notes: "Flexible ribbon cable for Pi Camera connection (Stretch Goal - AI Vision)"
     },
     {
-      component: "Wire and Connectors",
-      source: "Electrical Lab",
+      component: "Rotary Encoder (Speed Sensor)",
+      source: "Amazon",
       quantity: 1,
-      unitCost: 8.75,
-      totalCost: 8.75,
-      notes: "22 AWG wire, JST connectors"
+      unitCost: 8.99,
+      totalCost: 8.99,
+      notes: "LM393 speed sensor module for load sensing (MVP Core)"
     }
   ]
 
   const totalSpent = bomItems.reduce((sum, item) => sum + item.totalCost, 0)
-  const estimatedValue = totalSpent + 15.00 // Adding the estimated value of scrap aluminum
+  const estimatedValue = totalSpent
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8 accent-line text-center">
+      <h1 className="text-3xl font-bold text-gray-900 mb-3 accent-line text-center">
         Bill of Materials (BOM)
       </h1>
+      <p className="text-gray-600 text-lg mb-12 text-center">
+        Component costs for stretch goal features: pneumatic cleaning system and AI vision detection.
+      </p>
 
       <div className="overflow-hidden shadow-lg rounded-lg border border-gray-200">
         <div className="overflow-x-auto">
@@ -143,23 +122,12 @@ function Budget() {
             <tfoot className="bg-white">
               <tr>
                 <td colSpan="4" className="px-6 py-4 text-sm font-bold text-gray-900 text-right">
-                  Total Spent:
+                  Total Cost:
                 </td>
                 <td className="px-6 py-4 text-sm font-bold text-blue-600 text-right">
                   ${totalSpent.toFixed(2)}
                 </td>
                 <td className="px-6 py-4"></td>
-              </tr>
-              <tr>
-                <td colSpan="4" className="px-6 py-4 text-sm font-bold text-gray-900 text-right">
-                  Total Estimated Value:
-                </td>
-                <td className="px-6 py-4 text-sm font-bold text-green-600 text-right">
-                  ${estimatedValue.toFixed(2)}
-                </td>
-                <td className="px-6 py-4 text-sm text-gray-600">
-                  (including free materials)
-                </td>
               </tr>
             </tfoot>
           </table>
@@ -167,15 +135,15 @@ function Budget() {
       </div>
 
       {/* Budget Notes */}
-      <div className="mt-6 glass-card rounded-lg p-6 hover-lift bg-blue-900/20">
+      <div className="mt-6 bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
         <h2 className="text-xl font-bold text-gray-900 mb-3">
           Budget Notes
         </h2>
         <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>All prices are in USD and reflect actual purchase costs (or estimated market value for free materials).</li>
-          <li>The scrap aluminum was obtained from the machine shop at no cost, but has an estimated market value of $15.00.</li>
-          <li>Some components like wire and connectors were available from existing lab stock.</li>
-          <li>The project stayed well within the $300 budget constraint for the course.</li>
+          <li>All prices are in USD and reflect actual purchase costs from Amazon and McMaster Carr.</li>
+          <li>The <strong>Rotary Encoder</strong> is the only MVP core component shown - other core components (Raspberry Pi 5, Nema 23 motor, TB6600 driver, servo motor, chuck materials, enclosure) are not included in this list.</li>
+          <li>The majority of components listed are for <strong>Stretch Goals</strong>: Pneumatic cleaning system (gas valve, tubing, pressure sensor) and AI Vision detection (Pi Camera, FPC cable).</li>
+          <li>Total cost for these stretch goal components: <strong>${totalSpent.toFixed(2)}</strong></li>
         </ul>
       </div>
     </div>
