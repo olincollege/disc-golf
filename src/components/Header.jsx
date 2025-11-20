@@ -1,52 +1,59 @@
 import { NavLink } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 function Header() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const navLinkClass = ({ isActive }) => 
     isActive 
-      ? "text-blue-600 font-semibold px-4 py-2 text-sm border-b-2 border-blue-600"
-      : "text-gray-600 px-4 py-2 text-sm border-b-2 border-transparent"
+      ? "text-nobel-gold transition-colors cursor-pointer uppercase text-sm font-medium tracking-wide"
+      : "text-stone-600 hover:text-nobel-gold transition-colors cursor-pointer uppercase text-sm font-medium tracking-wide"
 
   return (
-    <nav className="bg-white sticky top-0 z-50 border-b-2 border-blue-600 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Project Title */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-blue-600">
-              Disc Golf Disc Cleaner
-            </h1>
-          </div>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#F9F8F4]/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
+      <div className="container mx-auto px-6 flex justify-between items-center">
+        {/* Logo & Title */}
+        <NavLink to="/" className="cursor-pointer group">
+          <span className="font-serif font-bold text-lg tracking-wide">
+            DISC CLEANER <span className="font-normal text-stone-500">2025</span>
+          </span>
+        </NavLink>
 
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-1">
-            <NavLink to="/" className={navLinkClass}>
-              Home
-            </NavLink>
-            <NavLink to="/team" className={navLinkClass}>
-              Team & Reflections
-            </NavLink>
-            <NavLink to="/design" className={navLinkClass}>
-              System Design
-            </NavLink>
-            <NavLink to="/process" className={navLinkClass}>
-              Design Process
-            </NavLink>
-            <NavLink to="/budget" className={navLinkClass}>
-              Budget (BOM)
-            </NavLink>
-            <NavLink to="/code" className={navLinkClass}>
-              Code & Resources
-            </NavLink>
-          </div>
+        {/* Navigation Links */}
+        <div className="hidden md:flex items-center gap-8">
+          <NavLink to="/" className={navLinkClass}>
+            Home
+          </NavLink>
+          <NavLink to="/team" className={navLinkClass}>
+            Team
+          </NavLink>
+          <NavLink to="/design" className={navLinkClass}>
+            Design
+          </NavLink>
+          <NavLink to="/process" className={navLinkClass}>
+            Process
+          </NavLink>
+          <NavLink to="/budget" className={navLinkClass}>
+            Budget
+          </NavLink>
+          <NavLink to="/code" className={navLinkClass}>
+            Code
+          </NavLink>
+        </div>
 
-          {/* Mobile menu button (optional - for future mobile responsiveness) */}
-          <div className="md:hidden">
-            <button className="text-gray-700 hover:text-blue-600 focus:outline-none">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+        {/* Mobile menu button */}
+        <div className="md:hidden">
+          <button className="text-stone-900 p-2">
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
     </nav>

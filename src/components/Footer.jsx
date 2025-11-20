@@ -1,12 +1,18 @@
 function Footer() {
   return (
-    <footer className="bg-white border-t-2 border-blue-600 mt-12 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="text-center">
-          <p className="text-gray-700 text-sm font-medium">
-            © 2025 Disc Golf Disc Cleaner Team | Olin College of Engineering Mechatronics
-          </p>
+    <footer className="bg-stone-900 text-stone-400 py-16">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="text-center md:text-left">
+          <div className="text-white font-serif font-bold text-2xl mb-2">Disc Golf Disc Cleaner</div>
+          <p className="text-sm">Automated cleaning station for disc golf discs</p>
         </div>
+        <div className="text-center md:text-right">
+          <p className="text-sm">Olin College of Engineering</p>
+          <p className="text-sm">Principles of Engineering • 2025</p>
+        </div>
+      </div>
+      <div className="text-center mt-12 text-xs text-stone-600">
+        © 2025 Disc Golf Disc Cleaner Team
       </div>
     </footer>
   )

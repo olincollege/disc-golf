@@ -14,7 +14,7 @@ import Code from './pages/Code'
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col bg-gray-50">
+      <div className="min-h-screen flex flex-col bg-[#F9F8F4] text-stone-800">
         <Header />
         <main className="flex-grow">
           <Routes>
