@@ -19,7 +19,7 @@ function Home() {
   return (
     <div>
       {/* Hero Section - Full Screen */}
-      <header className="relative h-screen flex items-center justify-center overflow-hidden -mt-16">
+      <header className="relative h-[110vh] flex items-center justify-center overflow-hidden -mt-16">
         {/* 3D Flying Discs Background */}
         <DiscScene />
 
