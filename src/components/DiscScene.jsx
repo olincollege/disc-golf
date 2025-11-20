@@ -59,7 +59,7 @@ export const DiscScene = () => {
         <pointLight position={[10, 10, 10]} intensity={1.2} />
         <pointLight position={[-10, -10, -10]} intensity={0.5} />
 
-        <group position={[0, -1.5, 0]}>
+        <group position={[0, -0.5, 0]}>
           {/* Floating discs at different positions - spinning in various directions */}
           <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.8}>
             <FlyingDisc position={[-4, 2, -3]} color="#C9A668" scale={1.2} rotationSpeed={0.8} />
@@ -67,10 +67,6 @@ export const DiscScene = () => {
 
           <Float speed={2.3} rotationIntensity={0.5} floatIntensity={1.1}>
             <FlyingDisc position={[5, -1, -4]} color="#7c3aed" scale={1} rotationSpeed={-1.4} />
-          </Float>
-
-          <Float speed={1.8} rotationIntensity={0.2} floatIntensity={0.6}>
-            <FlyingDisc position={[-1, 3, -2]} color="#3b82f6" scale={0.9} rotationSpeed={1} />
           </Float>
 
           <Float speed={2.7} rotationIntensity={0.7} floatIntensity={1.5}>
@@ -94,10 +90,6 @@ export const DiscScene = () => {
             <FlyingDisc position={[0, -3.5, -4.5]} color="#ef4444" scale={0.8} rotationSpeed={-1.1} />
           </Float>
 
-          <Float speed={1.3} rotationIntensity={0.2} floatIntensity={0.5}>
-            <FlyingDisc position={[6, 2.5, -5]} color="#06b6d4" scale={1.15} rotationSpeed={0.6} />
-          </Float>
-
           <Float speed={2.9} rotationIntensity={0.9} floatIntensity={1.6}>
             <FlyingDisc position={[-6, -2, -4]} color="#8b5cf6" scale={0.9} rotationSpeed={-1.8} />
           </Float>
@@ -108,14 +100,6 @@ export const DiscScene = () => {
 
           <Float speed={2.5} rotationIntensity={0.4} floatIntensity={1.2}>
             <FlyingDisc position={[-2, -1.5, -3.5]} color="#14b8a6" scale={0.95} rotationSpeed={-0.9} />
-          </Float>
-
-          <Float speed={1.7} rotationIntensity={0.6} floatIntensity={0.8}>
-            <FlyingDisc position={[1, 1.5, -5.5]} color="#a78bfa" scale={0.85} rotationSpeed={1.2} />
-          </Float>
-
-          <Float speed={2.2} rotationIntensity={0.3} floatIntensity={1.1}>
-            <FlyingDisc position={[-4.5, 4, -6]} color="#fb923c" scale={0.8} rotationSpeed={-1.3} />
           </Float>
         </group>
 
