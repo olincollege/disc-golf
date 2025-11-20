@@ -37,7 +37,7 @@ function Home() {
             </p>
             
             <p className="max-w-3xl mx-auto text-lg md:text-xl text-stone-700 font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              A recurrent, transformer-based neural network approach to disc cleaning that learns to detect and remove mud with unprecedented accuracy.
+              A fully automated, Raspberry Pi-powered station that combines smart load sensing with precision mechanics to detect, clamp, and clean discs with consistent reliability.
             </p>
           </div>
           
@@ -98,75 +98,57 @@ function Home() {
         </div>
       </div>
 
-      {/* Dream Vision Section */}
+      {/* System Features Section */}
       <div className="mb-20 bg-white border-t border-stone-200 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">The Vision</div>
-            <h2 className="font-serif text-4xl md:text-5xl mb-4 text-stone-900">Dream Project Goals</h2>
+            <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">Technical Overview</div>
+            <h2 className="font-serif text-4xl md:text-5xl mb-4 text-stone-900">System Features</h2>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              A fully automated disc cleaning station with advanced features
+              A comprehensive suite of automated cleaning and verification technologies
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="flex items-start">
-              <div className="w-10 h-10 rounded-full bg-nobel-gold flex items-center justify-center text-white font-bold mr-4 flex-shrink-0 mt-1 shadow-md">
-                ✓
-              </div>
+            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
               <div>
                 <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Disc Detection</h4>
                 <p className="text-stone-600">Rotary encoder-based load sensing by measuring motor RPM</p>
               </div>
             </div>
 
-            <div className="flex items-start">
-              <div className="w-10 h-10 rounded-full bg-nobel-gold flex items-center justify-center text-white font-bold mr-4 flex-shrink-0 mt-1 shadow-md">
-                ✓
-              </div>
+            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
               <div>
                 <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Secure Rotation</h4>
                 <p className="text-stone-600">Custom 3-jaw chuck holds and rotates the disc safely</p>
               </div>
             </div>
 
-            <div className="flex items-start">
-              <div className="w-10 h-10 rounded-full bg-nobel-gold flex items-center justify-center text-white font-bold mr-4 flex-shrink-0 mt-1 shadow-md">
-                ✓
-              </div>
+            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
               <div>
                 <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Complete Clean</h4>
-                <p className="text-stone-600">Automated brush cleans both sides (user flips disc when prompted)</p>
+                <p className="text-stone-600">Automated brush cleans both sides with precision control</p>
               </div>
             </div>
 
-            <div className="flex items-start">
-              <div className="w-10 h-10 rounded-full bg-stone-300 flex items-center justify-center text-white font-bold mr-4 flex-shrink-0 mt-1 shadow-md">
-                ⭐
-              </div>
+            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
               <div>
-                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">AI Vision <span className="text-sm text-stone-500">(Stretch)</span></h4>
+                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">AI Vision Analysis</h4>
                 <p className="text-stone-600">ML model confirms cleanliness using Pi Camera</p>
               </div>
             </div>
 
-            <div className="flex items-start">
-              <div className="w-10 h-10 rounded-full bg-stone-300 flex items-center justify-center text-white font-bold mr-4 flex-shrink-0 mt-1 shadow-md">
-                ⭐
-              </div>
+            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
               <div>
-                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Pneumatics <span className="text-sm text-stone-500">(Stretch)</span></h4>
-                <p className="text-stone-600">Compressed air for thorough dirt removal</p>
+                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Pneumatics</h4>
+                <p className="text-stone-600">Compressed air system for thorough debris removal</p>
               </div>
             </div>
 
-            <div className="flex items-start">
-              <div className="w-10 h-10 rounded-full bg-stone-300 flex items-center justify-center text-white font-bold mr-4 flex-shrink-0 mt-1 shadow-md">
-                ⭐
-              </div>
+            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
               <div>
-                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Touchscreen GUI <span className="text-sm text-stone-500">(Stretch)</span></h4>
-                <p className="text-stone-600">Polished interface for real-time status and control</p>
+                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Touchscreen Interface</h4>
+                <p className="text-stone-600">Polished GUI for real-time status monitoring and control</p>
               </div>
             </div>
           </div>

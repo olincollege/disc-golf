@@ -62,44 +62,44 @@ export const DiscScene = () => {
         <group position={[0, -0.5, 0]}>
           {/* Floating discs at different positions - spinning in various directions */}
           <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.8}>
-            <FlyingDisc position={[-4, 2, -3]} color="#C9A668" scale={1.2} rotationSpeed={0.8} />
+            <FlyingDisc position={[-6, 2.5, -3]} color="#C9A668" scale={1.2} rotationSpeed={0.8} />
           </Float>
 
           <Float speed={2.3} rotationIntensity={0.5} floatIntensity={1.1}>
-            <FlyingDisc position={[5, -1, -4]} color="#7c3aed" scale={1} rotationSpeed={-1.4} />
+            <FlyingDisc position={[7.5, -0.5, -4]} color="#7c3aed" scale={1} rotationSpeed={-1.4} />
           </Float>
 
           <Float speed={2.7} rotationIntensity={0.7} floatIntensity={1.5}>
-            <FlyingDisc position={[-3, -3, -5]} color="#f59e0b" scale={1.1} rotationSpeed={-0.7} />
+            <FlyingDisc position={[-4, -3.5, -5]} color="#f59e0b" scale={1.1} rotationSpeed={-0.7} />
           </Float>
 
           <Float speed={1.6} rotationIntensity={0.3} floatIntensity={0.7}>
-            <FlyingDisc position={[4, 1, -3.5]} color="#78716c" scale={0.95} rotationSpeed={1.3} />
+            <FlyingDisc position={[6, 1.5, -3.5]} color="#78716c" scale={0.95} rotationSpeed={1.3} />
           </Float>
 
           <Float speed={2.4} rotationIntensity={0.6} floatIntensity={1.4}>
-            <FlyingDisc position={[2, -2, -2]} color="#ec4899" scale={0.85} rotationSpeed={-1.6} />
+            <FlyingDisc position={[3.5, -2, -2]} color="#ec4899" scale={0.85} rotationSpeed={-1.6} />
           </Float>
 
           <Float speed={1.4} rotationIntensity={0.4} floatIntensity={0.9}>
-            <FlyingDisc position={[-5, 0, -3.5]} color="#10b981" scale={1.05} rotationSpeed={0.85} />
+            <FlyingDisc position={[-7.5, 0.5, -3.5]} color="#10b981" scale={1.05} rotationSpeed={0.85} />
           </Float>
 
           {/* Additional frisbees for more dynamic scene */}
           <Float speed={2.1} rotationIntensity={0.8} floatIntensity={1.3}>
-            <FlyingDisc position={[0, -3.5, -4.5]} color="#ef4444" scale={0.8} rotationSpeed={-1.1} />
+            <FlyingDisc position={[0, -4, -4.5]} color="#ef4444" scale={0.8} rotationSpeed={-1.1} />
           </Float>
 
           <Float speed={2.9} rotationIntensity={0.9} floatIntensity={1.6}>
-            <FlyingDisc position={[-6, -2, -4]} color="#8b5cf6" scale={0.9} rotationSpeed={-1.8} />
+            <FlyingDisc position={[-9, -2.5, -4]} color="#8b5cf6" scale={0.9} rotationSpeed={-1.8} />
           </Float>
 
           <Float speed={1.9} rotationIntensity={0.5} floatIntensity={1}>
-            <FlyingDisc position={[3, 3, -3]} color="#fbbf24" scale={1} rotationSpeed={1.5} />
+            <FlyingDisc position={[5, 3.5, -3]} color="#fbbf24" scale={1} rotationSpeed={1.5} />
           </Float>
 
           <Float speed={2.5} rotationIntensity={0.4} floatIntensity={1.2}>
-            <FlyingDisc position={[-2, -1.5, -3.5]} color="#14b8a6" scale={0.95} rotationSpeed={-0.9} />
+            <FlyingDisc position={[-2.5, -1.5, -3.5]} color="#14b8a6" scale={0.95} rotationSpeed={-0.9} />
           </Float>
         </group>
 

@@ -21,7 +21,7 @@ function Header() {
         {/* Logo & Title */}
         <NavLink to="/" className="cursor-pointer group">
           <span className="font-serif font-bold text-lg tracking-wide">
-            DISC CLEANER <span className="font-normal text-stone-500">2025</span>
+            DISC CLEANER
           </span>
         </NavLink>
 
