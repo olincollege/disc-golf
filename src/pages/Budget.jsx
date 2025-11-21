@@ -62,69 +62,73 @@ function Budget() {
   const estimatedValue = totalSpent
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-3 accent-line text-center">
-        Bill of Materials (BOM)
-      </h1>
-      <p className="text-gray-600 text-lg mb-12 text-center">
-        Component costs for stretch goal features: pneumatic cleaning system and AI vision detection.
-      </p>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+      <div className="text-center mb-16">
+        <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase animate-fade-in-up" style={{ animationDelay: '0s' }}>Project Economics</div>
+        <h1 className="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          Bill of Materials (BOM)
+        </h1>
+        <div className="w-20 h-1 bg-nobel-gold mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}></div>
+        <p className="text-stone-600 text-lg mb-12 text-center max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          Component costs for core features and stretch goals including pneumatic cleaning and AI vision detection.
+        </p>
+      </div>
 
-      <div className="overflow-hidden shadow-lg rounded-lg border border-gray-200">
+      <div className="overflow-hidden shadow-lg rounded-lg border border-stone-200 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
         <div className="overflow-x-auto">
-          <table className="w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+          <table className="w-full divide-y divide-stone-200">
+            <thead className="bg-stone-50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-4 text-left text-xs font-bold text-stone-500 uppercase tracking-wider">
                   Component
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-4 text-left text-xs font-bold text-stone-500 uppercase tracking-wider">
                   Source
                 </th>
-                <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Quantity
+                <th className="px-6 py-4 text-center text-xs font-bold text-stone-500 uppercase tracking-wider">
+                  Qty
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-4 text-right text-xs font-bold text-stone-500 uppercase tracking-wider">
                   Unit Cost
                 </th>
-                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-4 text-right text-xs font-bold text-stone-500 uppercase tracking-wider">
                   Total Cost
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-4 text-left text-xs font-bold text-stone-500 uppercase tracking-wider">
                   Notes
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white divide-y divide-stone-200">
               {bomItems.map((item, index) => (
-                <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-[#F9F8F4]'}>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-stone-900">
                     {item.component}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-stone-600">
                     {item.source}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 text-center">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-stone-600 text-center">
                     {item.quantity}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 text-right">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-stone-600 text-right">
                     ${item.unitCost.toFixed(2)}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 text-right">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-stone-900 text-right">
                     ${item.totalCost.toFixed(2)}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 text-sm text-stone-500 italic">
                     {item.notes}
                   </td>
                 </tr>
               ))}
             </tbody>
-            <tfoot className="bg-white">
+            <tfoot className="bg-stone-50 border-t border-stone-200">
               <tr>
-                <td colSpan="4" className="px-6 py-4 text-sm font-bold text-gray-900 text-right">
-                  Total Cost:
+                <td colSpan="4" className="px-6 py-4 text-base font-bold text-stone-900 text-right">
+                  Total Project Cost:
                 </td>
-                <td className="px-6 py-4 text-sm font-bold text-blue-600 text-right">
+                <td className="px-6 py-4 text-base font-bold text-nobel-gold text-right">
                   ${totalSpent.toFixed(2)}
                 </td>
                 <td className="px-6 py-4"></td>
@@ -135,15 +139,15 @@ function Budget() {
       </div>
 
       {/* Budget Notes */}
-      <div className="mt-6 bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">
+      <div className="mt-8 bg-[#F5F4F0] rounded-lg p-8 border-l-4 border-nobel-gold animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+        <h2 className="font-serif text-xl font-bold text-stone-900 mb-4">
           Budget Notes
         </h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <ul className="list-disc list-inside text-stone-600 space-y-2">
           <li>All prices are in USD and reflect actual purchase costs from Amazon and McMaster Carr.</li>
-          <li>The <strong>Rotary Encoder</strong> is the only MVP core component shown - other core components (Raspberry Pi 5, Nema 23 motor, TB6600 driver, servo motor, chuck materials, enclosure) are not included in this list.</li>
-          <li>The majority of components listed are for <strong>Stretch Goals</strong>: Pneumatic cleaning system (gas valve, tubing, pressure sensor) and AI Vision detection (Pi Camera, FPC cable).</li>
-          <li>Total cost for these stretch goal components: <strong>${totalSpent.toFixed(2)}</strong></li>
+          <li>The <strong className="text-stone-800">Rotary Encoder</strong> is the only MVP core component shown - other core components (Raspberry Pi 5, Nema 23 motor, TB6600 driver, servo motor, chuck materials, enclosure) are not included in this list.</li>
+          <li>The majority of components listed are for <strong className="text-stone-800">Stretch Goals</strong>: Pneumatic cleaning system (gas valve, tubing, pressure sensor) and AI Vision detection (Pi Camera, FPC cable).</li>
+          <li>Total cost for these stretch goal components: <strong className="text-stone-800">${totalSpent.toFixed(2)}</strong></li>
         </ul>
       </div>
     </div>

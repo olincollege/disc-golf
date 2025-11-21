@@ -108,10 +108,10 @@
     animation: spin 30s linear infinite;
   }
 
-  /* Smooth scroll behavior */
-  html {
+  /* Smooth scroll behavior removed to allow instant page transitions */
+  /* html {
     scroll-behavior: smooth;
-  }
+  } */
 
   /* Selection styling */
   ::selection {

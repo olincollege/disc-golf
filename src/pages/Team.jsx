@@ -33,53 +33,57 @@ function Team() {
   ]
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-3 accent-line text-center">
-        Team & Reflections
-      </h1>
-      <p className="text-gray-600 text-lg mb-12 text-center">
-        Meet our team and learn about their individual learning goals and reflections from this project.
-      </p>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+      <div className="text-center mb-16">
+        <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase animate-fade-in-up" style={{ animationDelay: '0s' }}>Our People</div>
+        <h1 className="font-serif text-4xl md:text-5xl font-bold text-stone-900 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          Team & Reflections
+        </h1>
+        <div className="w-20 h-1 bg-nobel-gold mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}></div>
+        <p className="text-stone-600 text-lg max-w-2xl mx-auto font-light animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          Meet our team and learn about their individual learning goals and reflections from this project.
+        </p>
+      </div>
 
       {/* Top Row - 3 Members */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
         {teamMembers.slice(0, 3).map((member, index) => (
           <div 
             key={index} 
-            className="glass-card rounded-xl p-6 hover-lift border-t-4 border-blue-600"
+            className="bg-white rounded-xl p-8 shadow-sm border border-stone-200 hover:shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-nobel-gold group"
           >
             {/* Header with Avatar, Name, Role */}
-            <div className="text-center mb-6">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-gray-900 font-bold text-xl mx-auto mb-4">
+            <div className="text-center mb-8">
+              <div className="w-20 h-20 rounded-full bg-stone-100 flex items-center justify-center text-nobel-gold font-serif font-bold text-2xl mx-auto mb-5 border border-stone-200 group-hover:border-nobel-gold transition-colors shadow-inner">
                 {member.name.split(' ').map(n => n[0]).join('')}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">
+              <h3 className="font-serif text-xl font-bold text-stone-900 mb-2">
                 {member.name}
               </h3>
-              <p className="text-blue-600 font-semibold text-sm">
+              <p className="text-stone-500 text-sm font-medium uppercase tracking-wider">
                 {member.role}
               </p>
             </div>
             
             {/* Initial Learning Goal */}
-            <div className="mb-4">
-              <h4 className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2 flex items-center">
-                <span className="w-1 h-4 bg-blue-600 mr-2"></span>
-                Initial Learning Goal
+            <div className="mb-6">
+              <h4 className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3 flex items-center">
+                <span className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-2"></span>
+                Initial Goal
               </h4>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-stone-600 leading-relaxed text-sm">
                 {member.learningGoal}
               </p>
             </div>
 
             {/* Reflection */}
             <div>
-              <h4 className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2 flex items-center">
-                <span className="w-1 h-4 bg-green-500 mr-2"></span>
+              <h4 className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3 flex items-center">
+                <span className="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>
                 Reflection
               </h4>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                {member.reflection}
+              <p className="text-stone-600 leading-relaxed text-sm italic">
+                {member.reflection || "Coming soon..."}
               </p>
             </div>
           </div>
@@ -87,44 +91,44 @@ function Team() {
       </div>
 
       {/* Bottom Row - 2 Members Centered */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
         {teamMembers.slice(3, 5).map((member, index) => (
           <div 
             key={index + 3} 
-            className="glass-card rounded-xl p-6 hover-lift border-t-4 border-blue-600"
+            className="bg-white rounded-xl p-8 shadow-sm border border-stone-200 hover:shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-nobel-gold group"
           >
             {/* Header with Avatar, Name, Role */}
-            <div className="text-center mb-6">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-gray-900 font-bold text-xl mx-auto mb-4">
+            <div className="text-center mb-8">
+              <div className="w-20 h-20 rounded-full bg-stone-100 flex items-center justify-center text-nobel-gold font-serif font-bold text-2xl mx-auto mb-5 border border-stone-200 group-hover:border-nobel-gold transition-colors shadow-inner">
                 {member.name.split(' ').map(n => n[0]).join('')}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">
+              <h3 className="font-serif text-xl font-bold text-stone-900 mb-2">
                 {member.name}
               </h3>
-              <p className="text-blue-600 font-semibold text-sm">
+              <p className="text-stone-500 text-sm font-medium uppercase tracking-wider">
                 {member.role}
               </p>
             </div>
             
             {/* Initial Learning Goal */}
-            <div className="mb-4">
-              <h4 className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2 flex items-center">
-                <span className="w-1 h-4 bg-blue-600 mr-2"></span>
-                Initial Learning Goal
+            <div className="mb-6">
+              <h4 className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3 flex items-center">
+                <span className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-2"></span>
+                Initial Goal
               </h4>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-stone-600 leading-relaxed text-sm">
                 {member.learningGoal}
               </p>
             </div>
 
             {/* Reflection */}
             <div>
-              <h4 className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2 flex items-center">
-                <span className="w-1 h-4 bg-green-500 mr-2"></span>
+              <h4 className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3 flex items-center">
+                <span className="w-1.5 h-1.5 rounded-full bg-stone-400 mr-2"></span>
                 Reflection
               </h4>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                {member.reflection}
+              <p className="text-stone-600 leading-relaxed text-sm italic">
+                {member.reflection || "Coming soon..."}
               </p>
             </div>
           </div>

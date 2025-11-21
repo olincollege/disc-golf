@@ -57,158 +57,77 @@ function Home() {
       {/* Content Sections */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-      {/* Key Features Section */}
+      {/* Product Overview Section */}
       <div id="features" className="mb-20">
-        <div className="text-center mb-12">
-          <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">Key Features</div>
-          <h2 className="font-serif text-4xl md:text-5xl mb-4 text-stone-900">Core Capabilities</h2>
-          <div className="w-20 h-1 bg-nobel-gold mx-auto"></div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="group animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-stone-200 hover:shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-nobel-gold">
-              <div className="w-12 h-1 bg-nobel-gold mb-4"></div>
-              <h3 className="font-serif text-2xl font-bold text-stone-900 mb-3">Intelligent Detection</h3>
-              <p className="text-stone-600 leading-relaxed">
-                Load sensing via rotary encoder measures motor RPM to detect disc presence automatically
-              </p>
-            </div>
-          </div>
-
-          <div className="group animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-stone-200 hover:shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-nobel-gold">
-              <div className="w-12 h-1 bg-nobel-gold mb-4"></div>
-              <h3 className="font-serif text-2xl font-bold text-stone-900 mb-3">Custom Chuck Design</h3>
-              <p className="text-stone-600 leading-relaxed">
-                3-jaw chuck securely clamps and rotates discs during cleaning without causing damage
-              </p>
-            </div>
-          </div>
-
-          <div className="group animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-stone-200 hover:shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:border-nobel-gold">
-              <div className="w-12 h-1 bg-nobel-gold mb-4"></div>
-              <h3 className="font-serif text-2xl font-bold text-stone-900 mb-3">Automated Control</h3>
-              <p className="text-stone-600 leading-relaxed">
-                Raspberry Pi 5 orchestrates all sensors, motors, and brush movements intelligently
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* System Features Section */}
-      <div className="mb-20 bg-white border-t border-stone-200 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">Technical Overview</div>
-            <h2 className="font-serif text-4xl md:text-5xl mb-4 text-stone-900">System Features</h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              A comprehensive suite of automated cleaning and verification technologies
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
-              <div>
-                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Disc Detection</h4>
-                <p className="text-stone-600">Rotary encoder-based load sensing by measuring motor RPM</p>
-              </div>
-            </div>
-
-            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
-              <div>
-                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Secure Rotation</h4>
-                <p className="text-stone-600">Custom 3-jaw chuck holds and rotates the disc safely</p>
-              </div>
-            </div>
-
-            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
-              <div>
-                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Complete Clean</h4>
-                <p className="text-stone-600">Automated brush cleans both sides with precision control</p>
-              </div>
-            </div>
-
-            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
-              <div>
-                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">AI Vision Analysis</h4>
-                <p className="text-stone-600">ML model confirms cleanliness using Pi Camera</p>
-              </div>
-            </div>
-
-            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
-              <div>
-                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Pneumatics</h4>
-                <p className="text-stone-600">Compressed air system for thorough debris removal</p>
-              </div>
-            </div>
-
-            <div className="flex items-start p-4 rounded-lg hover:bg-stone-50 transition-colors">
-              <div>
-                <h4 className="font-serif text-xl font-semibold text-stone-900 mb-2">Touchscreen Interface</h4>
-                <p className="text-stone-600">Polished GUI for real-time status monitoring and control</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* MVP Section */}
-      <div className="mb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left: Image */}
-          <div className="lg:col-span-5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          {/* Left: Product Image */}
+          <div className="lg:col-span-5 sticky top-24">
             <div className="aspect-square bg-stone-100 rounded-2xl overflow-hidden shadow-lg border border-stone-200">
               <img 
-                src="https://placehold.co/600x600/C9A668/ffffff?text=MVP+Prototype" 
-                alt="MVP Prototype" 
+                src="https://placehold.co/600x600/C9A668/ffffff?text=Final+Product" 
+                alt="Automated Disc Cleaner" 
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
 
-          {/* Right: MVP Info */}
+          {/* Right: Features & Details */}
           <div className="lg:col-span-7">
-            <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">THE MVP</div>
-            <h2 className="font-serif text-4xl mb-6 text-stone-900">Minimum Viable Product</h2>
+            <div className="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">CORE FEATURES</div>
+            <h2 className="font-serif text-4xl mb-6 text-stone-900">Automated Disc Cleaning Station</h2>
             
-            <p className="text-lg text-stone-600 leading-relaxed mb-8">
-              A functional physical prototype integrating all core systems to demonstrate a complete cleaning cycle.
+            <p className="text-lg text-stone-600 leading-relaxed mb-10">
+              A complete electromechanical system that autonomously detects, secures, and cleans disc golf discs. Our solution integrates advanced load sensing, precision motor control, and computer vision to ensure a perfect clean every cycle.
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div className="flex items-start">
-                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2"></div>
-                <p className="text-stone-700 text-lg">Enclosure with disc feed-in mechanism</p>
+                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2.5 flex-shrink-0"></div>
+                <div>
+                   <h4 className="text-stone-900 font-semibold text-lg">Intelligent Control System</h4>
+                   <p className="text-stone-600">Raspberry Pi 5 orchestrates all sensors, motors, and AI vision logic.</p>
+                </div>
               </div>
-              <div className="flex items-start">
-                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2"></div>
-                <p className="text-stone-700 text-lg">Raspberry Pi 5 control system</p>
-              </div>
-              <div className="flex items-start">
-                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2"></div>
-                <p className="text-stone-700 text-lg">Custom 3-jaw chuck with central rotation motor</p>
-              </div>
-              <div className="flex items-start">
-                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2"></div>
-                <p className="text-stone-700 text-lg">Servo-controlled brush actuation</p>
-              </div>
-              <div className="flex items-start">
-                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2"></div>
-                <p className="text-stone-700 text-lg">Physical button controls (START/RESET/STOP)</p>
-              </div>
-              <div className="flex items-start">
-                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2"></div>
-                <p className="text-stone-700 text-lg">Rotary encoder load sensing system</p>
-              </div>
-            </div>
 
-            <div className="mt-8 p-6 bg-[#F5F4F0] border border-stone-200 rounded-lg border-l-4 border-l-nobel-gold">
-              <p className="font-serif italic text-lg text-stone-800">
-                "Our MVP demonstrates a complete cleaning cycle with all core mechanical, electrical, and software systems integrated into a single functional prototype."
-              </p>
+              <div className="flex items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2.5 flex-shrink-0"></div>
+                <div>
+                   <h4 className="text-stone-900 font-semibold text-lg">Smart Load Sensing</h4>
+                   <p className="text-stone-600">Rotary encoder detects disc presence by monitoring motor RPM changes.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2.5 flex-shrink-0"></div>
+                <div>
+                   <h4 className="text-stone-900 font-semibold text-lg">Secure 3-Jaw Chuck</h4>
+                   <p className="text-stone-600">Custom-designed mechanism safely clamps and rotates discs during cleaning.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2.5 flex-shrink-0"></div>
+                <div>
+                   <h4 className="text-stone-900 font-semibold text-lg">Automated Deep Clean</h4>
+                   <p className="text-stone-600">Servo-actuated brushes scrub both sides while pneumatics remove debris.</p>
+                </div>
+              </div>
+
+               <div className="flex items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2.5 flex-shrink-0"></div>
+                <div>
+                   <h4 className="text-stone-900 font-semibold text-lg">AI Quality Verification</h4>
+                   <p className="text-stone-600">Integrated Pi Camera with ML model confirms cleanliness in real-time.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-nobel-gold mr-4 mt-2.5 flex-shrink-0"></div>
+                <div>
+                   <h4 className="text-stone-900 font-semibold text-lg">Interactive Interface</h4>
+                   <p className="text-stone-600">Polished touchscreen GUI combined with physical controls for intuitive operation.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
