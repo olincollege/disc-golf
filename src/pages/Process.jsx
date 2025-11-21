@@ -17,18 +17,18 @@ function Process() {
 
       {/* GitHub-Style Tree Timeline - Centered */}
       <div className="relative max-w-6xl mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-        {/* Main Vertical Line with gradient - CENTERED */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-stone-300 via-nobel-gold to-stone-300 transform -translate-x-1/2"></div>
+        {/* Main Vertical Line - CENTERED */}
+        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-stone-400 transform -translate-x-1/2"></div>
         
         {/* Timeline Items */}
         <div className="space-y-32">
           {/* Sprint 1 - LEFT BRANCH */}
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Dot on CENTER LINE - at midpoint */}
-            <div className="absolute left-1/2 top-1/2 w-4 h-4 bg-white rounded-full border-4 border-stone-300 shadow-sm z-20 transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute left-1/2 top-1/2 w-4 h-4 bg-white rounded-full border-4 border-stone-400 shadow-sm z-20 transform -translate-x-1/2 -translate-y-1/2"></div>
             
             {/* Short line ONLY in the gap - from center to left */}
-            <div className="hidden md:block absolute left-1/2 top-1/2 w-8 h-px bg-stone-300 z-10 transform -translate-x-full -translate-y-1/2"></div>
+            <div className="hidden md:block absolute left-1/2 top-1/2 w-8 h-px bg-stone-400 z-10 transform -translate-x-full -translate-y-1/2"></div>
             
             {/* Content on LEFT */}
             <div className="md:order-1 order-2 flex justify-end">
@@ -63,7 +63,7 @@ function Process() {
             <div className="absolute left-1/2 top-1/2 w-4 h-4 bg-white rounded-full border-4 border-nobel-gold shadow-sm z-20 transform -translate-x-1/2 -translate-y-1/2"></div>
             
             {/* Short line ONLY in the gap - from center to right */}
-            <div className="hidden md:block absolute left-1/2 top-1/2 w-8 h-px bg-stone-300 z-10 transform -translate-y-1/2"></div>
+            <div className="hidden md:block absolute left-1/2 top-1/2 w-8 h-px bg-stone-400 z-10 transform -translate-y-1/2"></div>
             
             {/* Empty space on LEFT */}
             <div className="hidden md:block md:order-1"></div>
@@ -98,7 +98,7 @@ function Process() {
             <div className="absolute left-1/2 top-1/2 w-4 h-4 bg-white rounded-full border-4 border-stone-900 shadow-sm z-20 transform -translate-x-1/2 -translate-y-1/2"></div>
             
             {/* Short line ONLY in the gap - from center to left */}
-            <div className="hidden md:block absolute left-1/2 top-1/2 w-8 h-px bg-stone-300 z-10 transform -translate-x-full -translate-y-1/2"></div>
+            <div className="hidden md:block absolute left-1/2 top-1/2 w-8 h-px bg-stone-400 z-10 transform -translate-x-full -translate-y-1/2"></div>
             
             {/* Content on LEFT */}
             <div className="md:order-1 order-2 flex justify-end">
